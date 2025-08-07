@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: your custom easing/timing */
+@layer utilities {
+  .dropdown-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
