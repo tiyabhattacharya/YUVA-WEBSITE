@@ -1,58 +1,66 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import yuvaLogo from '../assets/yuvaLogo.jpg'; // adjust path if needed
-import Footer from './Footer';
-import Navbar from './Navbar';
+import React from "react";
+import logo from "../assets/yuvalogo.jpg";
 
 const AboutYuva = () => {
   return (
-    <>
-      <Navbar />
+    <div className="flex flex-col md:flex-row px-4 py-8 md:px-16 md:py-12 gap-8 bg-white min-h-screen">
+      {/* Content */}
+      <div className="md:w-3/5 w-full text-left text-gray-800 text-sm md:text-base leading-relaxed space-y-4">
+        <p className="text-base font-semibold text-blue-900">
+          पसीने की स्याही से जो लिखते है अपने इरादे,<br />
+          उनके मुकद्दर के पन्ने कोरे नहीं होते....
+        </p>
 
-      <div className="min-h-screen flex flex-col justify-between bg-white">
-        <div className="flex flex-col md:flex-row justify-between items-center px-6 py-12 gap-8">
-          {/* Text Section */}
-          <div className="w-full md:w-1/2 space-y-6 text-left">
-            <h1 className="text-4xl font-bold text-gray-800">About YUVA</h1>
-            <p className="text-lg text-gray-600">
-              YUVA is a non-profit initiative that empowers underprivileged students by providing quality education,
-              mentorship, and guidance for various competitive exams. Our goal is to uplift and guide youth who might
-              not otherwise have access to such resources.
-            </p>
-            <p className="text-lg text-gray-600">
-              From regular classes and doubt-clearing sessions to exposure and counseling, YUVA aims to transform lives
-              by nurturing talent and providing equal opportunities. We believe in the potential of every student.
-            </p>
-            <p className="text-lg text-gray-600">
-              Started with a vision to make a difference, YUVA continues to grow as a strong community of passionate
-              learners, dedicated mentors, and committed volunteers.
-            </p>
-          </div>
+        <p>
+          अपने इसी इरादे के साथ 12 जनवरी 2001 को श्री एम्. राजीव जी द्वारा "युवा" संस्था की नींव रखी गई थी। इस संस्था का प्रमुख उद्देश्य उसके नाम से ही प्रतीत होता है, "युवा" विस्तृत रूप में Youth Unity for Voluntary Action" है जो कि अपने संक्षिप्त नाम "YUVA" से जानी जाती है। युवा का  मुख्य उद्देश्य  युवाओं को  कैरियर के लिए  जागरूक  बनाना  एवं  विभिन्न  प्रतियोगी  परीक्षाओं  के लिए तैयार करने  के साथ  ही सामाजिक कार्यों  के माध्यम  से उन्हें  समाज  से जोड़कर  एक  जिम्मेदार  नागरिक बनाना है।
+        </p>
 
-          {/* Logo Animation */}
-          <div className="w-full md:w-1/2 relative h-72 flex items-center justify-center">
-            <motion.img
-              src={yuvaLogo}
-              alt="YUVA Logo"
-              className="absolute w-40 h-40 object-contain"
-              initial={{ x: '100vw', y: '-100vh', opacity: 0 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
-              transition={{ type: 'spring', stiffness: 80, delay: 0.3 }}
-            />
-            <motion.img
-              src={yuvaLogo}
-              alt="YUVA Logo"
-              className="absolute w-40 h-40 object-contain"
-              initial={{ x: '-100vw', y: '100vh', opacity: 0 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
-              transition={{ type: 'spring', stiffness: 80, delay: 0.6 }}
-            />
-          </div>
-        </div>
+        <p>
+          आधुनिक काल के महानतम व्यक्तिव एवं युवाओं के प्रेरणास्त्रोत सुप्रसिद्ध श्री स्वामी विवेकानंद जी के जीवन से प्रेरित होकर श्री एम. राजीव जी के मन में देश के युवाओं को समाज की मुख्यधारा के साथ जोड़ने का विचार आया। किसी भी समृद्ध देश का कायाकल्प उस देश के युवाओं की मेहनत एवं लगन का प्रतिबिम्ब होता है, इसी विचार के साथ श्री एम. राजीव जी ने ऐसे युवाओं को लक्षित किया जो अपनी आर्थिक एवं अन्य विपरीत परिस्थितिओं के कारण तथा उचित मार्गदर्शन एवं शिक्षा न मिलने के आभाव में आगे नहीं बढ़ पाते है, और समाज में अपने आपको प्रतिस्थापित नहीं कर पाते है।
+        </p>
 
-        <Footer />
+        <p>
+          युवाओं कि इन्हीं परेशानियों को ध्यान में रखते हुए उनके निवारण हेतु "युवा" संस्था के उद्देश्यों का निर्धारण किया गया एवं उनका संपादन नियमित रूप से  किया जाने लगा। युवा में  विभिन्न  केंद्रीय  एवं  राज्य  सेवा आयोग , व्यापमं , एस एस सी , बैंकिंग , रेल्वे  व अन्य प्रतियोगी   परीक्षाओं  हेतु  निःशुल्क  मार्गदर्शन व कोचिंग प्रदान  की  जाती है। युवा के सभी शिक्षक  विभिन्न  सरकारी  पदों  पर विराजमान  है, इसके  साथ ही   युवा से   सफल हुए  छात्र भी  इस  संस्था  में  अपना   योगदान देते  है ।
+        </p>
+
+        <p className="font-semibold text-blue-800 text-base">अभी तक युवा का सफर :-</p>
+
+        <p>
+          झारखंड राज्य के जमशेदपुर के रहने वाले श्री एम. राजीव जी का चयन 1992 में कर्मचारी चयन आयोग द्वारा केंदीय उत्पाद एवं सीमा शुल्क विभाग में निरीक्षक के पद पर किया गया एवं उन्हें मध्य प्रदेश राज्य सरकार (अब छत्तीसगढ़) के अंतर्गत रायपुर मे पदस्थ किया गया। पदभार ग्रहण करने पश्चात श्री एम. राजीव जी ने केंदीय उत्पाद एवं सीमा शुल्क विभाग के अंतर्गत अपनी सेवाएँ देना प्रारम्भ किया। इस दौरान अपने पेशेवर नौकरी की शुरुआत होने के 9 वर्ष बाद विभिन्न शासकीय कार्यालयों एवं स्थानीय लोगों से संपर्क में आने के पश्चात उन्हें अहसास हुआ है कि यहां के स्थानीय युवा अपनी विपरीत आर्थिक परिस्थितियों, उचित शिक्षा एवं सकुशल मार्गदर्शन के आभाव मे आगे नहीं बढ़ पा रहे है, तथा समाज में पिछड़े हुए है।
+        </p>
+
+        <p>
+          इस स्थिति को देखकर श्री एम राजीव जी ने स्थानीय युवाओं को आगे बढ़ाने का संकल्प लिया एवं अपनी ही अर्जित की गयी सफलता को अपने संकल्प का मूल आधार बनाते हुए उन्होने अपने स्तर पर स्थानीय युवाओं को शासकीय नौकरी के प्रति जागरूक किया एवं प्रतियोगी परीक्षाओं की तैयारी के लिए अपने निवास स्थान से ही <strong>नि:शुल्क</strong> शिक्षा देना प्रारम्भ किया। इस तरह संकल्पित श्री एम राजीव दो छात्रों से शुरुआत कर अपने लक्ष्य की ओर अग्रसर हुए और छात्रों की संख्या बढ्ने पर, 12 जनवरी 2001 को स्वामी विवेकानंद के जन्मदिवस पर मनाएं जाने वाले "राष्ट्रीय युवा दिवस" के अवसर पर "युवा" की स्थापना की गई।
+        </p>
+
+        <p>
+          कुछ  सदस्यों को साथ लेकर  प्रारंभ की गई "युवा" संस्था में धीरे-धीरे  सदस्यों की संख्या बढ़ती गई, एवं इसके सकारात्मक परिणाम नजर आने लगे। "युवा" से जुड़ने वाले लगभग सभी सदस्य अपनी क्षमता एवं प्रतिभा के बल पर समाज में अपने आपको प्रतिस्थापित कर  चुके है, जो कभी आर्थिक एवं सामाजिक रूप से पिछड़े थे। वर्तमान में  "युवा" के 150  से  अधिक  सदस्य  देश  के  विभिन्न  शासकीय एवं अर्द्ध-शासकीय पदों जैसे - उप-जिलाधिकारी, प्रशासनिक अधिकारी, नायब  तहसीलदार, परिवीक्षाधीन अधिकारी, सांख्यिकी  अधिकारी, खाद्य निरीक्षक, पुलिस निरीक्षक, राजस्व निरीक्षक, पटवारी, शिक्षक, लेखापाल  आदि  विभिन्न पदों  पर  अपनी  सेवाएं  प्रदान  कर  रहे  है।
+        </p>
+
+        <p className="font-semibold text-blue-800 text-base">युवा  की  उपलब्धियां</p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>छत्तीसगढ़  के  पूर्व राज्यपाल  माननीय श्री शेखर  दत्त  द्वारा पुरस्कार वर्ष 2010 ।</li>
+          <li>रेडक्रॉस  सोसाइटी  द्वारा  पुरस्कार।</li>
+          <li>रोटरी  क्लब  द्वारा  सम्मान।</li>
+          <li>विभिन्न समाचार  पत्रों  में  युवा के  कार्यों  का  उल्लेख।</li>
+          <li>माय एफ एम पर रायपुर के सुपर  30 नामक कार्यक्रम का प्रसारण।</li>
+          <li>दूरदर्शन  दिल्ली के गुड न्यूज़ कार्यक्रम  द्वारा  युवा  की  संचालित  क्लास  का सराहना करते हुये प्रसारण ।</li>
+          <li>छत्तीसगढ़ राज्य  सरकार, शिक्षा विभाग  द्वारा  आयोजित राज्य स्तरीय  क्विज  प्रतियोगिता  का  संचालन।</li>
+          <li>ओम साई सेवार्थ रक्तदाता समिति द्वारा सुपर हीरो सम्मान।</li>
+        </ul>
       </div>
-    </>
+
+      {/* Logo */}
+      <div className="md:w-2/5 w-full flex justify-center md:justify-end">
+        <div className="sticky top-20">
+          <img
+            src={logo}
+            alt="Yuva Logo"
+            className="w-40 md:w-64 transition-transform duration-300 hover:scale-110"
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 

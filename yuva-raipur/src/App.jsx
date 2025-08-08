@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutYuva from './pages/AboutYuva';
+import ManBehindYuva from './pages/ManBehindYuva';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
 
@@ -16,7 +17,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about/yuva" element={<AboutYuva />} />
           {/* Placeholder routes for future About pages */}
-          <Route path="/man-behind-yuva" element={<div>Coming Soon...</div>} />
+          <Route path="/man-behind-yuva" element={<ManBehindYuva />} />
           <Route path="/mission-vision" element={<div>Coming Soon...</div>} />
           <Route path="/teaching-faculty" element={<div>Coming Soon...</div>} />
           <Route path="/executive-body" element={<div>Coming Soon...</div>} />
