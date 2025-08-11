@@ -11,11 +11,17 @@ import CoursesPage from './pages/CoursesPage';
 import RegistrationForm from './pages/RegistrationForm';
 import BlogPage from './pages/BlogPage';
 import TeachingFaculty from './pages/TeachingFaculty';
+import Banner from './components/Banner';
+import DoNotMissStrip from './components/DoNotMissStrip';
 
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800">
-      <Navbar />
+      
+       <Navbar /> 
+      <Banner/>
+      
+      <DoNotMissStrip/>
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />

@@ -9,6 +9,8 @@ module.exports = {
         blink: 'blink 1s step-start 0s infinite',
         pulseOnce: 'pulseOnce 1s ease-in-out',
         slideIn: 'slideIn 0.3s ease-out',
+        // marquee: 'marquee 15s linear infinite',
+        marquee: 'marquee linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -28,6 +30,10 @@ module.exports = {
         slideIn: {
           '0%': { opacity: 0, transform: 'translateX(-20px)' },
           '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+    '100%': { transform: 'translateX(-50%)' },
         },
       },
     },
