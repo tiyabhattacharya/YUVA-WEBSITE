@@ -10,6 +10,7 @@ import VisionAndMission from './pages/VisionAndMission';
 import CoursesPage from './pages/CoursesPage';
 import RegistrationForm from './pages/RegistrationForm';
 import BlogPage from './pages/BlogPage';
+import TeachingFaculty from './pages/TeachingFaculty';
 
 const App = () => {
   return (
@@ -23,13 +24,14 @@ const App = () => {
           <Route path="/man-behind-yuva" element={<ManBehindYuva />} />
           <Route path="/mission-vision" element={<VisionAndMission />} />
 
-          <Route path="/teaching-faculty" element={<div>Coming Soon...</div>} />
+          <Route path="/about/faculty" element={<TeachingFaculty/>} />
           <Route path="/executive-body" element={<div>Coming Soon...</div>} />
           <Route path="/our-supporters" element={<div>Coming Soon...</div>} />
           <Route path="/achievements" element={<div>Coming Soon...</div>} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/admission/form" element={<RegistrationForm/>}/>
           <Route path="/blog" element={<BlogPage/>}/>
+          
         </Routes>
       </main>
       <Footer />
