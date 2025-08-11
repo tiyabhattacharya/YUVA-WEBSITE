@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import manImage from "../assets/man-placeholder.jpg"; // replace with actual image later
 
 const ManBehindYuva = () => {
   return (
     <div className="bg-white text-gray-800 min-h-screen flex flex-col">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="container mx-auto px-4 md:px-12 py-10 flex flex-col md:flex-row gap-10">
         {/* Text Section */}
@@ -51,7 +51,7 @@ const ManBehindYuva = () => {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

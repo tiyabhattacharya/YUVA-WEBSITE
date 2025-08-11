@@ -23,8 +23,8 @@ function Navbar() {
             label="About"
             items={[
               ['About Yuva', '/about/yuva'],
-              ['Man Behind Yuva', '/about/man'],
-              ['Mission and Vision', '/about/mission'],
+              ['Man Behind YUVA', '/man-behind-yuva'], 
+              ['Mission and Vision', '/mission-vision'],
               ['Teaching Faculty', '/about/faculty'],
               ['Executive Body', '/about/executive'],
               ['Our Supporters', '/about/supporters'],
@@ -73,7 +73,7 @@ function Navbar() {
             label="About"
             items={[
               ['About Yuva', '/about/yuva'],
-              ['Man Behind Yuva', '/about/man'],
+              ['Man Behind YUVA', '/manbehindyuva'], // ✅ FIXED LINK
               ['Mission and Vision', '/about/mission'],
               ['Teaching Faculty', '/about/faculty'],
               ['Executive Body', '/about/executive'],
