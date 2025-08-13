@@ -77,12 +77,24 @@ const BlogPage = () => {
       <div className="col-span-6 bg-white rounded-lg shadow p-4 flex flex-col">
         <h2 className="text-2xl font-bold mb-4">Trending News</h2>
         <p className="text-gray-700">
-          YUVA has recently launched its 100 Days Challenge to boost competitive exam preparation
-          across the state. This initiative aims to provide free resources, mock tests, and live
-          classes every day for 100 consecutive days...
+          From the Hearts of YUVA Volunteers
+
+We, the volunteers of YUVA, have always believed that youth potential is like a seed — it needs the right soil, care, and direction to grow. Over the years, we have taught, mentored, and learned alongside thousands of young minds. Today, we see YUVA evolving into something larger — a space where every dimension of youth growth finds a home.
+
+In our coaching classrooms, we watch aspirants sharpen their knowledge, their discipline, and their focus — preparing for exams that open doors to service and leadership. But we know that success goes beyond marks and ranks.
+
+Through skill development programs, we see youth learning how to communicate, adapt, innovate, and work with modern tools. The hybrid model lets us reach those far away, ensuring that location never limits learning.
+
+And in our experience exchange platforms, magic happens — a civil servant shares lessons from the field, an entrepreneur talks about their first failed venture, an artist explains how creativity can solve real problems. These moments inspire as much as any textbook.
+
+For us, the three pillars are not separate — they are connected like roots, trunk, and branches of the same tree. Knowledge gives strength, skills give direction, and experience gives wisdom. Together, they make the YUVA ecosystem strong enough to nurture every dream.
+
+We are not just building careers here; we are shaping lives. And as volunteers, we are proud to be the hands that help this tree grow.
+
+— YUVA Volunteers
         </p>
         <button className="text-blue-600 mt-2 hover:underline">
-          Read More
+          {/* Read More */}
         </button>
 
         {/* Countdown */}
