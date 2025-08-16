@@ -1,188 +1,180 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-2xl font-bold tracking-wide">
-          <Link to="/">YourLogo</Link>
-        </div>
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-blue-800/80 shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0 text-2xl font-bold tracking-wide text-white">
+            <Link to="/">YUVA</Link>
+          </div>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-6 items-center">
-          <NavItem label="Home" to="/" />
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-6 lg:space-x-8 items-center">
+            {/* Home */}
+            <Link
+              to="/"
+              className="relative px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300 after:content-[''] after:block after:w-0 hover:after:w-full after:h-[2px] after:bg-yellow-400 after:transition-all"
+            >
+              Home
+            </Link>
 
-          <DropdownNav
-            label="About"
-            items={[
-              ['About Yuva', '/about/yuva'],
-              ['Man Behind YUVA', '/man-behind-yuva'], 
-              ['Mission and Vision', '/mission-vision'],
-              ['Teaching Faculty', '/about/faculty'],
-              ['Executive Body', '/about/executive'],
-              ['Our Supporters', '/about/supporters'],
-              ['Achievements', '/about/achievements'],
-            ]}
-          />
+            {/* About Us Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300">
+                About Us <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 transform group-hover:translate-y-1 transition-all duration-300 ease-out w-56 backdrop-blur-lg bg-white/60 text-black rounded-xl shadow-lg py-2 z-50">
+                <Link to="/about/yuva" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  About YUVA
+                </Link>
+                <Link to="/man-behind-yuva" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Man Behind YUVA
+                </Link>
+                <Link to="/mission-vision" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Mission & Vision
+                </Link>
+                <Link to="/about/faculty" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Teaching Faculty
+                </Link>
+                <Link to="/about/supporters" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Our Supporters
+                </Link>
+                <Link to="/about/current-team" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Current Team
+                </Link>
+                <Link to="/about/mentors" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Mentors
+                </Link>
+              </div>
+            </div>
 
-          <NavItem label="Courses" to="/courses" />
+            {/* Courses */}
+            <Link
+              to="/courses"
+              className="relative px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300 after:content-[''] after:block after:w-0 hover:after:w-full after:h-[2px] after:bg-yellow-400 after:transition-all"
+            >
+              Courses
+            </Link>
 
-          <DropdownNav
-            label="Admission"
-            items={[
-              ['Registration Form', '/admission/form'],
-              ['Registered Students', '/admission/students'],
-            ]}
-          />
+            {/* Admission Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300">
+                Admission <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 transform group-hover:translate-y-1 transition-all duration-300 ease-out w-48 backdrop-blur-lg bg-white/60 text-black rounded-xl shadow-lg py-2 z-50">
+                <Link to="/admission/form" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Registration Form
+                </Link>
+                <Link to="/registered-students" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Registered Students
+                </Link>
+              </div>
+            </div>
 
-          <NavItem label="Mentor" to="/mentor" />
-          <NavItem label="Achievements" to="/achievements" />
-          <NavItem label="Blog" to="/blog" />
+            {/* Achievements */}
+            <Link
+              to="/achievements"
+              className="relative px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300 after:content-[''] after:block after:w-0 hover:after:w-full after:h-[2px] after:bg-yellow-400 after:transition-all"
+            >
+              Achievements
+            </Link>
 
-          <DropdownNav
-            label="Gallery"
-            items={[
-              ['Photo Gallery', '/gallery/photos'],
-              ['Video Gallery', '/gallery/videos'],
-              ['Media Gallery', '/gallery/media'],
-            ]}
-          />
-        </div>
+            {/* YUVA Challenge */}
+            <Link
+              to="/yuva-challenge"
+              className="relative px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300 after:content-[''] after:block after:w-0 hover:after:w-full after:h-[2px] after:bg-yellow-400 after:transition-all"
+            >
+              YUVA Challenge
+            </Link>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {/* YUVA Drishti */}
+            <Link
+              to="/yuva-drishti"
+              className="relative px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300 after:content-[''] after:block after:w-0 hover:after:w-full after:h-[2px] after:bg-yellow-400 after:transition-all"
+            >
+              YUVA Drishti
+            </Link>
+
+            {/* Gallery Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center px-3 py-2 rounded-md hover:bg-white/20 transition-all duration-300">
+                YUVA-Samvaad <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 transform group-hover:translate-y-1 transition-all duration-300 ease-out w-48 backdrop-blur-lg bg-white/60 text-black rounded-xl shadow-lg py-2 z-50">
+                <Link to="/photo-gallery" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Photo Gallery
+                </Link>
+                <Link to="/video-gallery" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Video Gallery
+                </Link>
+                <Link to="/media-gallery" className="block px-4 py-2 hover:bg-white/30 rounded-md">
+                  Media Gallery
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="focus:outline-none text-white text-2xl">
+              ☰
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
-          <MobileNavItem label="Home" to="/" setIsOpen={setIsOpen} />
+        <div className="md:hidden bg-blue-800/80 backdrop-blur-md text-white px-6 pb-4 space-y-2">
+          <Link to="/" className="block py-2 hover:text-yellow-400">Home</Link>
 
-          <MobileDropdown
-            label="About"
-            items={[
-              ['About Yuva', '/about/yuva'],
-              ['Man Behind YUVA', '/manbehindyuva'], // ✅ FIXED LINK
-              ['Mission and Vision', '/about/mission'],
-              ['Teaching Faculty', '/about/faculty'],
-              ['Executive Body', '/about/executive'],
-              ['Our Supporters', '/about/supporters'],
-              ['Achievements', '/about/achievements'],
-            ]}
-            setIsOpen={setIsOpen}
-          />
+          <details>
+            <summary className="py-2 cursor-pointer">About Us</summary>
+            <div className="pl-4">
+              <Link to="/about-yuva" className="block py-1">About YUVA</Link>
+              <Link to="/man-behind-yuva" className="block py-1">Man Behind YUVA</Link>
+              <Link to="/mission-vision" className="block py-1">Mission & Vision</Link>
+              <Link to="/teaching-faculty" className="block py-1">Teaching Faculty</Link>
+              <Link to="/our-supporters" className="block py-1">Our Supporters</Link>
+              <Link to="/current-team" className="block py-1">Current Team</Link>
+              <Link to="/mentors" className="block py-1">Mentors</Link>
+            </div>
+          </details>
 
-          <MobileNavItem label="Courses" to="/courses" setIsOpen={setIsOpen} />
+          <Link to="/courses" className="block py-2 hover:text-yellow-400">Courses</Link>
 
-          <MobileDropdown
-            label="Admission"
-            items={[
-              ['Registration Form', '/admission/form'],
-              ['Registered Students', '/admission/students'],
-            ]}
-            setIsOpen={setIsOpen}
-          />
+          <details>
+            <summary className="py-2 cursor-pointer">Admission</summary>
+            <div className="pl-4">
+              <Link to="/registration-form" className="block py-1">Registration Form</Link>
+              <Link to="/registered-students" className="block py-1">Registered Students</Link>
+            </div>
+          </details>
 
-          <MobileNavItem label="Mentor" to="/mentor" setIsOpen={setIsOpen} />
-          <MobileNavItem label="Achievements" to="/achievements" setIsOpen={setIsOpen} />
-          <MobileNavItem label="Blog" to="/blog" setIsOpen={setIsOpen} />
+          <Link to="/achievements" className="block py-2 hover:text-yellow-400">Achievements</Link>
+          <Link to="/yuva-challenge" className="block py-2 hover:text-yellow-400">YUVA Challenge</Link>
+          <Link to="/yuva-drishti" className="block py-2 hover:text-yellow-400">YUVA Drishti</Link>
 
-          <MobileDropdown
-            label="Gallery"
-            items={[
-              ['Photo Gallery', '/gallery/photos'],
-              ['Video Gallery', '/gallery/videos'],
-              ['Media Gallery', '/gallery/media'],
-            ]}
-            setIsOpen={setIsOpen}
-          />
+          <details>
+            <summary className="py-2 cursor-pointer">YUVA-Samvaad</summary>
+            <div className="pl-4">
+              <Link to="/photo-gallery" className="block py-1">Photo Gallery</Link>
+              <Link to="/video-gallery" className="block py-1">Video Gallery</Link>
+              <Link to="/media-gallery" className="block py-1">Media Gallery</Link>
+            </div>
+          </details>
         </div>
       )}
     </nav>
   );
-}
-
-function NavItem({ label, to }) {
-  return (
-    <Link
-      to={to}
-      className="hover:bg-white hover:text-blue-900 px-4 py-2 rounded-md transition duration-300"
-    >
-      {label}
-    </Link>
-  );
-}
-
-function DropdownNav({ label, items }) {
-  return (
-    <div className="relative group">
-      <button className="hover:bg-white hover:text-blue-900 px-4 py-2 rounded-md transition duration-300">
-        {label}
-      </button>
-      <div className="absolute top-full left-0 opacity-0 invisible group-hover:visible group-hover:opacity-100 transform group-hover:translate-y-1 transition-all duration-300 ease-out bg-white text-blue-900 shadow-lg rounded-md py-2 w-52 z-50">
-        {items.map(([name, path]) => (
-          <Link
-            key={name}
-            to={path}
-            className="block px-4 py-2 hover:bg-blue-100 transition"
-          >
-            {name}
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function MobileNavItem({ label, to, setIsOpen }) {
-  return (
-    <Link
-      to={to}
-      onClick={() => setIsOpen(false)}
-      className="block px-4 py-2 hover:bg-white hover:text-blue-900 rounded-md transition duration-300"
-    >
-      {label}
-    </Link>
-  );
-}
-
-function MobileDropdown({ label, items, setIsOpen }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div>
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full text-left px-4 py-2 hover:bg-white hover:text-blue-900 rounded-md transition"
-      >
-        {label}
-      </button>
-      {open && (
-        <div className="ml-4 mt-1 space-y-1">
-          {items.map(([name, path]) => (
-            <Link
-              key={name}
-              to={path}
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-1 text-sm hover:underline"
-            >
-              {name}
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
+};
 
 export default Navbar;
